@@ -10,6 +10,7 @@
   --color-white: hsl(0, 0%, 100%);
   --color-stone-100: hsl(30, 54%, 90%);
   --color-stone-150: hsl(30, 18%, 87%);
+
    --color-stone-600: hsl(30, 10%, 34%);
    --color-stone-900: hsl(24, 5%, 18%);
    --color-brown-800: hsl(14, 45%, 36%);
@@ -24,29 +25,76 @@
 /* young serif 400 */
 /* outfit 400, 600, 700 */
 :root {
-  @apply text-base bg-stone-100 font-outfit font-normal;
+  @apply text-sm bg-stone-100 font-outfit font-normal text-stone-600 md:text-base;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+/* text sizing and font setup */
 h1,h2{
   @apply font-young-serif font-normal;
 }
+h1{
+  @apply text-xl py-4 text-stone-900;
+}
+h2{
+  @apply text-lg text-brown-800 py-4;
+}
 h3{
-  @apply font-bold;
+  @apply font-bold text-rose-800;
+}
+p, td, a, .attribution>span{
+  @apply text-sm;
 }
 span{
   @apply font-semibold;
 }
+/* list */
 ul{
-  @apply list-disc;
+  @apply list-disc pl-5;
 }
 ol{
-  @apply list-decimal;
+  @apply list-decimal pl-5 marker:text-brown-800 marker:font-semibold;
 }
+li{
+  @apply text-sm py-1;
+}
+/* main container */
 .container{
-  @apply px-4;
+  @apply bg-white px-4;
+}
+/* prep time */
+.prep-container{
+  @apply bg-rose-50 rounded-lg py-3 px-2 mt-6;
+  li{
+    @apply py-1;
+  }
+}
+hr{
+  @apply text-stone-150 w-full mx-auto mt-4;
+}
+/* table */
+table{
+  @apply my-4 w-full;
+}
+tr{
+  @apply my-4 border-b-2 border-stone-150 w-full;
+}
+td{
+  @apply py-2 px-4;
+}
+.bold-data{
+  @apply font-semibold text-brown-800;
+}
+/* footer */
+.attribution{
+  @apply pt-4 text-xs;
+}
+.attribution>span{
+  @apply font-light;
+}
+.attribution>a{
+  @apply font-medium text-rose-800;
 }
