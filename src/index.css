@@ -1,11 +1,30 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Tailwind CSS custom theme */
+@theme{
+  /* Breakpoints for mobile and desktop */
+  --breakpoint-xs: 20rem;
+  --breakpoint-mobile: 23.438rem; 
+  --breakpoint-desktop: 90rem; 
+  /* Colors */
+  --color-white: hsl(0, 0%, 100%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-stone-150: hsl(30, 18%, 87%);
+   --color-stone-600: hsl(30, 10%, 34%);
+   --color-stone-900: hsl(24, 5%, 18%);
+   --color-brown-800: hsl(14, 45%, 36%);
+   --color-rose-50: hsl(330, 100%, 98%);
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-frontend-mentor-blue: hsl(228, 45%, 44%);
+
+  /* Fonts */
+  --font-outfit: "Outfit", sans-serif;
+  --font-young-serif: "Young Serif", serif;
+}
+/* young serif 400 */
+/* outfit 400, 600, 700 */
+:root {
+  @apply text-base bg-stone-100 font-outfit font-normal;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,56 +32,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+h1,h2{
+  @apply font-young-serif font-normal;
 }
-a:hover {
-  color: #535bf2;
+h3{
+  @apply font-bold;
 }
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+span{
+  @apply font-semibold;
 }
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+ul{
+  @apply list-disc;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+ol{
+  @apply list-decimal;
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.container{
+  @apply px-4;
 }
