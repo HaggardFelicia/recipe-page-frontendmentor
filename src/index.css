@@ -62,8 +62,20 @@ li{
   @apply text-sm py-1;
 }
 /* main container */
+.main{
+  @apply mx-auto xs:my-12;
+}
 .container{
-  @apply bg-white px-4;
+  @apply bg-white mx-auto w-full xs:rounded-lg;
+}
+.image-container{
+  @apply xs:p-4;
+  img{
+    @apply xs:rounded-md;
+  }
+}
+.content-container{
+  @apply px-4;
 }
 /* prep time */
 .prep-container{
@@ -90,7 +102,7 @@ td{
 }
 /* footer */
 .attribution{
-  @apply pt-4 text-xs;
+  @apply pt-4 text-xs mx-auto text-center;
 }
 .attribution>span{
   @apply font-light;
