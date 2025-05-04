@@ -37,16 +37,16 @@ h1,h2{
   @apply font-young-serif font-normal;
 }
 h1{
-  @apply text-xl py-4 text-stone-900;
+  @apply text-xl py-4 text-stone-900 sm:text-2xl;
 }
 h2{
-  @apply text-lg text-brown-800 py-4;
+  @apply text-lg text-brown-800 py-4 sm:text-xl;
 }
 h3{
   @apply font-bold text-rose-800;
 }
 p, td, a, .attribution>span{
-  @apply text-sm;
+  @apply text-sm sm:text-base;
 }
 span{
   @apply font-semibold;
@@ -59,27 +59,27 @@ ol{
   @apply list-decimal pl-5 marker:text-brown-800 marker:font-semibold;
 }
 li{
-  @apply text-sm py-1;
+  @apply text-sm py-1 sm:text-base;
 }
 /* main container */
 .main{
   @apply mx-auto xs:my-12;
 }
 .container{
-  @apply bg-white mx-auto w-full xs:rounded-lg;
+  @apply bg-white mx-auto xs:w-full  xs:rounded-lg sm:w-1/2 ;
 }
 .image-container{
-  @apply xs:p-4;
+  @apply xs:p-4 sm:p-5;
   img{
     @apply xs:rounded-md;
   }
 }
 .content-container{
-  @apply px-4;
+  @apply xs:px-4 pb-1 sm:px-5;
 }
 /* prep time */
 .prep-container{
-  @apply bg-rose-50 rounded-lg py-3 px-2 mt-6;
+  @apply bg-rose-50 rounded-lg py-3 px-4 mt-6;
   li{
     @apply py-1;
   }
@@ -89,10 +89,13 @@ hr{
 }
 /* table */
 table{
-  @apply my-4 w-full;
+  @apply my-4 w-full pb-4;
 }
 tr{
   @apply my-4 border-b-2 border-stone-150 w-full;
+}
+tr:last-child{
+  @apply border-b-0;
 }
 td{
   @apply py-2 px-4;
@@ -102,7 +105,7 @@ td{
 }
 /* footer */
 .attribution{
-  @apply pt-4 text-xs mx-auto text-center;
+  @apply pt-4 text-xs mx-auto text-center sm:text-sm;
 }
 .attribution>span{
   @apply font-light;

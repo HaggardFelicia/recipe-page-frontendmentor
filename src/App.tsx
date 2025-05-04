@@ -86,11 +86,12 @@ function App() {
           </table>
         </div>
       </div>
-          <div className="attribution">
-            <span>Challenge by </span>
-            <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. <span>Coded by </span>
-            <a href="#">Felicia Haggard</a>.
-          </div>
+      <div className="attribution">
+        <span>Challenge by </span>
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. &nbsp; 
+        <span>Coded by </span>
+        <a href="#">Felicia Haggard</a>.
+      </div>
     </div>
   )
 }
